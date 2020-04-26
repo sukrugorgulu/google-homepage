@@ -5,16 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Search</title>
     <style>
-        main {
+        :root {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header nav{
+            /* background-color: #eee;*/
+            border: 1px solid #f0f0f0;
+            top: 0;
+            position: fixed;
+            overflow: hidden;
+            width: 99%;
+            padding-right: 10px;
+        }
+
+        /* Style the links inside the navigation bar */
+        header nav a {
+        float: right;
+        color: #555;
+        text-align: center;
+        padding: 10px 10px 5px 0px;
+        text-decoration: none;
+        font-size: 14px;
+        }
+
+        /* Change the color of links on hover */
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Add a color to the active/current link */
+        header nav a.active {
+        background-color: #4CAF50;
+        color: white;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Place the navbar at the bottom of the page, and make it stick */
+        footer nav {
+        background-color: #ddd;
+        overflow: hidden;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        }
+
+        /* Style the links inside the navigation bar */
+        footer nav a {
+        float: left;
+        display: block;
+        color: #555;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 14px;
+        }
+
+        /* Change the color of links on hover */
+        footer nav a:hover {
+        background-color: #ddd;
+        color: black;
+        text-decoration: underline;
+        }
+
+        /* Add a color to the active/current link */
+        footer nav a.active {
+        background-color: #4CAF50;
+        color: white;
+        }
+
+        #searchtextbox {
+            width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 20px 20px 20px 20px;
+            padding: 10px 40px 10px 40px;
+        }
+        #searchtextbox:hover {
+            box-shadow: 0px 0px 6px #bbb;
+        }
+        #searchtextbox:focus {
+            box-shadow: 0px 0px 6px #bbb;
+        }
+
+        .searchbutton {
+            border-radius: 5px;
+            background-color: #eee;
+            border: none;
+            color: #555;
+            padding: 10px 25px;
             text-align: center;
-            padding: 30%;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+        }
+        .searchbutton:hover {
+            box-shadow: 0 0 1px #555;
+        }
+
+        main {
+            padding-top: 200px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 <header>
     <nav>
-
+        <a href="#">User</a>
+        <a href="#">G-Apps</a>
+        <a href="#">Images</a>
+        <a href="#">Gmail</a>
     </nav>
 </header>
     <main>
@@ -24,18 +125,35 @@
     </div>
     <div class="inputdiv">
         <form action="submit">
-            <div>
-            <input type="text">
+            <input id="searchtextbox" type="text">
+            <br>
+            <br>
+            <div class="buttons">
+                <input type="button" value="Google Search" class="searchbutton">
+                &nbsp;
+                <input type="button" value="I'm Feeling Lucky" class="searchbutton">
+
             </div>
+            <br><br>
             <div>
-                <input type="button" value="Search in Google">
-                <input type="button" value="I'm Feeling Lucky">
+                Google offered in: English
             </div>
 
         </form>
     </div>
     </main>
     <footer>
+        <nav>
+            <a href="#">Advertising</a>
+            <a href="#">Businness</a>
+            <a href="#">About</a>
+            <a href="#">How Search Works</a>
+
+            <a href="#" style="float:right">Settings</a>
+            <a href="#" style="float:right">Terms</a>
+            <a href="#" style="float:right">Privacy</a>
+             
+        </nav>
         
     </footer>
 </body>
